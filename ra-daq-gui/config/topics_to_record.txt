@@ -1,0 +1,7 @@
+/gps/fix
+/imu/data
+/gps/vel
+/gps/nav_status
+/gps/pos_type
+/zed2/zed_node/left_raw/image_raw_color
+/zed2/zed_node/depth/depth_registered

@@ -1,0 +1,18 @@
+data_dir: 'road_audit_data'
+sync_dir: 'road_audit_data/sync'
+topics_file_pkgpath: 'config/topics_to_record.txt'
+audit_inputs_pkgpath: 'config/inputs.json'
+imgdirname: 'images'
+depthdirname: 'depths'
+gpsfilename: 'gps.txt'
+max_bag_size: 3000
+cam_age_tol: 2.0
+gps_age_tol: 2.0
+gps_required: false
+cam_required: false
+gps_topic: '/gps/fix'
+cam_topic: '/zed2/zed_node/left_raw/image_raw_color'
+depth_topic: '/zed2/zed_node/depth/depth_registered'
+cam_image_compressed: false
+gps_launch_command: 'roslaunch oxford_gps_eth gps.launch'
+cam_launch_command: 'roslaunch zed_wrapper zed2.launch'

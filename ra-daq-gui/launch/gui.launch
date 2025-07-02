@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- RA DAQ GUI -->
+    <!-- <group ns="ra_daq"> -->
+    <rosparam file="$(find ra-daq-gui)/config/gui.yaml" />
+    <node pkg="ra-daq-gui" type="ra_daq_gui.py" name="ra_gui" output="screen" />
+    <!-- </group> -->
+	
+</launch>
