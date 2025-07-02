@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- RA DAQ GUI -->
+    <!-- <group ns="ra_daq"> -->
+    <rosparam file="$(find ra-daq-gui)/config/gui.yaml" />
+    <node pkg="ra-daq-gui" type="cam_cal.py" name="cam_cal" output="screen" />
+    <!-- </group> -->
+	
+</launch>
