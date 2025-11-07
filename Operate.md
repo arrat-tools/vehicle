@@ -89,12 +89,25 @@ Unit data is created in the sync directory defined as `sync_dir` in the configur
     ```
 2. Execute the sync script
     ```bash
-    ./data_sync.sh
+    AWS_ACCESS_KEY_ID="<your access key id>" AWS_SECRET_ACCESS_KEY="<your secret access key>" bash ./data-sync.sh "s3://tac-image-staging/"
     ```
 
+_You may need to update `s3://tac-image-staging/` to the `SessionInputBucketName` generated while deploying the Pipeline and Step Functions during the [infrastructure deployment][infrastructure-deployment-link]. Remember to put `s3://` before and `/` after the SessionInputBucketName_
+
+> \[!NOTE]
+>
+> You can grab `your access key id` and `secret access key` from the `/arratoperator/credentials/ArratOperator` secret. `your access key id = ACCESS_KEY` and `your secret access key = SECRET_KEY` from the stored secrets's SecretString. These values were generated while deploying the Pipeline and Step Functions during the [infrastructure deployment][infrastructure-deployment-link].
+> 
+> Navigate to the AWS Secrets Manager through the web portal or run `aws secretsmanager get-secret-value --secret-id /arratoperator/credentials/ArratOperator --profile arrat-cli` to get the values.
+>
+> _If needed, update arrat-cli to the profile configured during the prerequisites step_
 
 ## References
 
 * Installation guide
 * Calibration guide
 * Sync Data to Cloud
+
+<!-- Link Groups -->
+
+[infrastructure-deployment-link]: https://github.com/arrat-tools/deploy/blob/main/guide/01-deploy-the-infrastructure.md
